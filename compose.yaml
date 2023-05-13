@@ -1,0 +1,15 @@
+services:
+  app:
+    build: ./build
+    ports:
+      - "5173:5173"
+    volumes:
+      - type: bind
+        source: "./app"
+        target: "/app"
+    environment:
+      - VUE_APP_API_BASE_URL=http://localhost:3000/api
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
+    tty: true
+    stdin_open: true
+    
