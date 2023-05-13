@@ -2,24 +2,14 @@ services:
   app:
     build: ./build
     ports:
-      - "8080:8080"
-      - "3000:3000"
+      - "5173:5173"
     volumes:
-      - ./app:/app
+      - type: bind
+        source: "./app"
+        target: "/app"
     environment:
       - VUE_APP_API_BASE_URL=http://localhost:3000/api
       - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
-    depends_on:
-      - database
-
-  database:
-    image: postgres:13
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydatabase
-    volumes:
-      - mydatabase:/var/lib/postgresql/data
-
-volumes:
-  mydatabase:
+    tty: true
+    stdin_open: true
+    
