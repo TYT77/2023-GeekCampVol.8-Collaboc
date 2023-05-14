@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "firebase": "^9.22.0",
-    "marked": "^5.0.2",
+    "markdown-wasm": "^1.2.0",
     "vue": "^3.2.47",
     "vue-router": "^4.2.0"
   },
