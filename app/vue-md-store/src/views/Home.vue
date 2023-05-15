@@ -6,8 +6,14 @@ Home
 
 </template>
 
+
 <script setup>
 
-import MV from '../components/MarkdownViewer.vue'
+import MV from '../components/MarkdownEditer.vue'
 
 </script>
+
+<style scoped>
+
+
+</style>
