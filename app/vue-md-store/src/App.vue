@@ -8,6 +8,6 @@ import Navigation from './components/Navigation.vue'
 
 </script>
 
-<style scoped>
-    
+<style>
+    @import 'bulma/css/bulma.css'
 </style>
