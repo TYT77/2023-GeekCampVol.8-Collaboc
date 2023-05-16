@@ -12,6 +12,7 @@
     "bulma": "^0.9.4",
     "firebase": "^9.22.0",
     "markdown-wasm": "^1.2.0",
+    "uuid": "^9.0.0",
     "vue": "^3.2.47",
     "vue-router": "^4.2.0"
   },
