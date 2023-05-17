@@ -1,15 +1,10 @@
 <template>
-
-Home
-
-<MV />
-
+    <h1>Home</h1>
+    <p>Home page content</p>
 </template>
-
 
 <script setup>
 
-import MV from '../components/MarkdownEditer.vue'
 
 </script>
 

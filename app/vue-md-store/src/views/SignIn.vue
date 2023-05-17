@@ -4,7 +4,6 @@
 </template>
   
 <script setup>
-import { ref } from 'vue'
 import {getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 
 import { useRouter } from 'vue-router';
@@ -16,7 +15,7 @@ const signInWithGoogle = () => {
     signInWithPopup(getAuth(), provider)
         .then((result) => {
             console.log(result.user)
-            router.push('/feed')
+            router.push('/todo')
         }).catch((error) => {
             console.log(error)
         })
