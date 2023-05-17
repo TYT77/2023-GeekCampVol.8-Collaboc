@@ -23,6 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-
 # firebase
-./app/vue-md-store/src/firebase/index.js
+src/firebase/index.js
