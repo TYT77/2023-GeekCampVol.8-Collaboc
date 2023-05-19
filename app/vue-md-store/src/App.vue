@@ -1,13 +1,14 @@
+<template>
+    <Navigation />
+    <router-view />
+</template>
+
 <script setup>
 import Navigation from './components/Navigation.vue'
+import { app } from './firebase'
 
 </script>
 
-<template>
-  <Navigation />
-  <router-view />
-</template>
-
-<style scoped>
-
+<style>
+    @import 'bulma/css/bulma.css'
 </style>
