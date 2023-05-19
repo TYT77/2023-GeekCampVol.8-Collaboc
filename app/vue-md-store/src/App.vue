@@ -5,9 +5,10 @@
 
 <script setup>
 import Navigation from './components/Navigation.vue'
+import { app } from './firebase'
 
 </script>
 
-<style scoped>
-    
+<style>
+    @import 'bulma/css/bulma.css'
 </style>
