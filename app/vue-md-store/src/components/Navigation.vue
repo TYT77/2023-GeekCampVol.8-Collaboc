@@ -25,6 +25,7 @@
 
                 <router-link to="/" class="navbar-item">Home</router-link>
                 <router-link to="/todo" v-if="isLoggedIn" class="navbar-item">Todo</router-link>
+                <router-link to="/edit" v-if="isLoggedIn" class="navbar-item">Editer</router-link>
 
             </div>
 
@@ -94,5 +95,4 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <style scoped>
-    @import 'bulma/css/bulma.css'
 </style>

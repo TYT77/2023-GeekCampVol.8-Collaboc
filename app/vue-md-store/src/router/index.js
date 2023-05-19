@@ -11,6 +11,22 @@ const router = createRouter({
             component: () => import('../views/Todo.vue'),
             meta: { requiresAuth: true },
         },
+        {  
+            path: '/edit',
+            component: () => import('../views/Edit.vue'),
+            meta: { requiresAuth: true },
+        },
+        {  
+            path: '/edit/:id',
+            component: () => import('../views/Edit.vue'),
+            meta: { requiresAuth: true },
+        },
+        {  
+            path: '/aaaa',
+            component: () => import('../components/Props.vue'),
+            meta: { requiresAuth: true },
+        },
+        
     ],
 })
 
