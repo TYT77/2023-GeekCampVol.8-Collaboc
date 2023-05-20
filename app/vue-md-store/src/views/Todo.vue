@@ -124,6 +124,7 @@
 </script>
 
 <style scoped>
+    
     .container{
         max-width: 400px;
 
