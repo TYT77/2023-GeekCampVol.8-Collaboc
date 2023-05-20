@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container pt-5">
         
         <div class="title has-text-centered">
             Todo
@@ -60,6 +60,7 @@
     } from "firebase/firestore";
     import { db } from '../firebase'
     import { getAuth, onAuthStateChanged } from "firebase/auth";
+    import router from '../router';
 
     const auth = getAuth();
     const uid = ref('')
@@ -82,6 +83,8 @@
                 });
                 todos.value = fbTodos
             })
+        }else{
+            router.push('/')
         }
     });
 
@@ -126,8 +129,7 @@
 <style scoped>
     
     .container{
-        max-width: 400px;
-
+        min-width: 400px;
     }
 
     .line-through{

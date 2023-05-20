@@ -5,7 +5,6 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {  path: '/', component: () => import('../views/Home.vue') },
-        {  path: '/sign-in', component: () => import('../views/SignIn.vue') },
         {  
             path: '/todo',
             component: () => import('../views/Todo.vue'),
@@ -44,8 +43,8 @@ router.beforeEach(async(to, from, next) => {
         if (await getCurrentUser()) {
             next()
         } else {
-            alert('You must be logged in to see this page')
-            next({ path: '/sign-in' })
+            alert('ログインし直してください')
+            next({ path: '/' })
         }
     } else {   
         next()
