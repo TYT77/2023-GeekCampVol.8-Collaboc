@@ -9,6 +9,4 @@
 </script>
 
 <style scoped>
-
-
 </style>
