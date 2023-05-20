@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container pt-5">
         
         <div class="title has-text-centered">
             Todo
@@ -129,8 +129,7 @@
 <style scoped>
     
     .container{
-        max-width: 400px;
-
+        min-width: 400px;
     }
 
     .line-through{

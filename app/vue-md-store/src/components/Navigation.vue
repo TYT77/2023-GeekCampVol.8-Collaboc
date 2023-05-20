@@ -1,50 +1,57 @@
 <template>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        
-        <!-- スマホで表示されるモノ -->
-        <div class="navbar-brand">
-            
-            <!-- ロゴ -->
-            <router-link class="navbar-item" to="/">
-                <img src="/vite.svg" width="112" height="28">
-            </router-link>
-            
-            <!-- ハンバーガーメニュー -->
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
+    <section class="hero is-link black nav-section">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    
+                    <!-- スマホで表示されるモノ -->
+                    <div class="navbar-brand">
+                        <!-- ロゴ -->
+                        <router-link class="navbar-item navbar-item-image" to="/"></router-link>
 
-        </div>
-
-        <!-- PCだとそのまま表示されるモノ -->
-        <div id="navbarBasicExample" class="navbar-menu">
-            
-            <div class="navbar-start">
-
-                <router-link to="/" class="navbar-item">Home</router-link>
-                <router-link to="/todo" v-if="isLoggedIn" class="navbar-item">Todo</router-link>
-                <router-link to="/edit" v-if="isLoggedIn" class="navbar-item">Editer</router-link>
-
-            </div>
-
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a @click="signInWithGoogle" v-if="!isLoggedIn" class="button is-primary">    
-                            <strong>Log in</strong>
-                        </a>
-                        <a @click="handleSignOut" v-if="isLoggedIn" class="button is-light">
-                            <strong>Sign Out</strong>
+                        <!-- ハンバーガーメニュー -->
+                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
                         </a>
                     </div>
+
+                    <!-- PCだとそのまま表示されるモノ -->
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <router-link to="/" class="mt-2 mr-5 pl-3 pr-3 button is-outlined is-white navbar-item">
+                                <span class="material-symbols-outlined mr-2">
+                                    home
+                                </span>
+                                <span>Home</span>
+                            </router-link>
+                            <router-link to="/todo" v-if="isLoggedIn" class="mt-2 mr-5 pl-3 pr-3 button is-outlined is-white navbar-item">
+                                <span class="material-symbols-outlined mr-2">
+                                    checklist
+                                </span>
+                                <span>Todo</span>
+                            </router-link>
+                            <router-link to="/edit" v-if="isLoggedIn" class="mt-2 mr-5 pl-3 pr-3 button is-outlined is-white navbar-item">
+                                <span class="material-symbols-outlined mr-2">
+                                    edit_note
+                                </span>
+                                <span>Editer</span>
+                            </router-link>
+                            <div class="buttons navbar-item">
+                                <a @click="signInWithGoogle" v-if="!isLoggedIn" class="button is-primary">    
+                                    <strong>Log in</strong>
+                                </a>
+                                <a @click="handleSignOut" v-if="isLoggedIn" class="button is-light">
+                                    <strong>Sign Out</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
+            </nav>
         </div>
-
-    </nav>
+    </section>
 </template>
 
 <script setup>
@@ -108,4 +115,21 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <style scoped>
+
+.navbar-item-image {
+    background: url(/navber.png) no-repeat center center;
+    background-size: cover;
+    width: 152px
+}
+
+.black{
+    background-color: black;
+}
+
+.nav-section{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
 </style>
