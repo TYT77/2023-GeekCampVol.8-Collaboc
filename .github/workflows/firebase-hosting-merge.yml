@@ -30,4 +30,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YUKKE_PRODUCTS }}'
           channelId: live
           projectId: yukke-products
-          path: "./app/vue-md-store" 
+          entryPoint: "./app/vue-md-store" 
