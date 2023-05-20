@@ -60,6 +60,7 @@
     } from "firebase/firestore";
     import { db } from '../firebase'
     import { getAuth, onAuthStateChanged } from "firebase/auth";
+    import router from '../router';
 
     const auth = getAuth();
     const uid = ref('')
@@ -82,6 +83,8 @@
                 });
                 todos.value = fbTodos
             })
+        }else{
+            router.push('/')
         }
     });
 

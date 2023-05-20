@@ -32,9 +32,9 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <router-link to="/sign-in" v-if="!isLoggedIn" class="button is-primary">    
+                        <a @click="signInWithGoogle" v-if="!isLoggedIn" class="button is-primary">    
                             <strong>Log in</strong>
-                        </router-link>
+                        </a>
                         <a @click="handleSignOut" v-if="isLoggedIn" class="button is-light">
                             <strong>Sign Out</strong>
                         </a>
@@ -50,7 +50,7 @@
 <script setup>
 
 import { onMounted, ref } from 'vue'
-import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth'
+import { getAuth, onAuthStateChanged, signOut , GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import router from '../router';
 
 const isLoggedIn = ref(false)
@@ -70,6 +70,19 @@ const handleSignOut = () => {
     }).catch((error) => {
         console.log(error)
     })
+}
+
+const signInWithGoogle = () => {
+
+    const provider = new GoogleAuthProvider()
+    signInWithPopup(getAuth(), provider)
+        .then((result) => {
+            //console.log(result.user)
+            router.push('/todo')
+        }).catch((error) => {
+            console.log(error)
+        })
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
