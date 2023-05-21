@@ -1,0 +1,44 @@
+.hidden{
+    display: none;
+}
+
+.content {
+    a{
+        color: #0056b3;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    a:hover{
+        color: #0056b3;
+        text-decoration: none;
+        background-color: transparent;
+    }
+    a:active{
+        color: #0056b3;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    a:focus{
+        color: #0056b3;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    a:visited{
+        color: #0056b3;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    a:link{
+        color: #0056b3;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    
+    hr{
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+}

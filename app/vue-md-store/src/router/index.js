@@ -11,13 +11,20 @@ const router = createRouter({
             meta: { requiresAuth: true },
         },
         {  
-            path: '/edit',
+            path: '/edit/:oid/:did',
+            name: 'edit',
             component: () => import('../views/Edit.vue'),
             meta: { requiresAuth: true },
         },
         {  
-            path: '/edit/:id',
+            path: '/edit',
+            name: 'edit',
             component: () => import('../views/Edit.vue'),
+            meta: { requiresAuth: true },
+        },
+        {  
+            path: '/list',
+            component: () => import('../views/List.vue'),
             meta: { requiresAuth: true },
         },
         {  

@@ -1,53 +1,56 @@
 <template>
-    <div class="container pt-5">
-        
-        <div class="title has-text-centered">
-            Todo
-        </div>  
+    <section class="hero">
+        <div class="hero-body">
 
-        <div class="field is-grouped mb-5">
-            <p class="control is-expanded">
-                <input v-model="newTodoTitle" class="input" type="text" placeholder="Add a todo">
-            </p>
-            <p class="control">
-                <button :disabled="!newTodoTitle" @click="addTodo" class="button is-info">Add</button>
-            </p>
-        </div>
+            <div class="container pt-5">
+                <div class="title has-text-centered">
+                    Todo
+                </div>  
 
-        <div
-            v-for="todo in todos" 
-            class="card mb-5"
-            :class="{'has-background-success-light': todo.completed}"
-        >
-            <div class="card-content">
-                <div class="content">
+                <div class="field is-grouped mb-5">
+                    <p class="control is-expanded">
+                        <input v-model="newTodoTitle" class="input" type="text" placeholder="Add a todo">
+                    </p>
+                    <p class="control">
+                        <button :disabled="!newTodoTitle" @click="addTodo" class="button is-info">Add</button>
+                    </p>
+                </div>
 
-                    <div class="columns is-mobile is-vcentered">
-                        <div 
-                            class="column"
-                            :class="{'has-text-success line-through ': todo.completed}"
-                        >
-                            {{ todo.title }}
-                        </div>
-                        <div class="column is-5 has-text-right">
-                            <button 
-                                @click="completeTodo(todo.id)"
-                                class="button"
-                                :class="todo.completed ? 'is-success' : 'is-light'"
-                            >
-                                &check;
-                            </button>
-                            <button @click="deleteTodo(todo.id)" class="button is-danger ml-2">
-                                &cross;
-                            </button>
+                <div
+                    v-for="todo in todos" 
+                    class="card mb-5"
+                    :class="{'has-background-success-light': todo.completed}"
+                >
+                    <div class="card-content">
+                        <div class="content">
+
+                            <div class="columns is-mobile is-vcentered">
+                                <div 
+                                    class="column"
+                                    :class="{'has-text-success line-through ': todo.completed}"
+                                >
+                                    {{ todo.title }}
+                                </div>
+                                <div class="column is-5 has-text-right">
+                                    <button 
+                                        @click="completeTodo(todo.id)"
+                                        class="button"
+                                        :class="todo.completed ? 'is-success' : 'is-light'"
+                                    >
+                                        &check;
+                                    </button>
+                                    <button @click="deleteTodo(todo.id)" class="button is-danger ml-2">
+                                        &cross;
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-
-    </div>
-    
+    </section>    
 </template>
 
 <script setup>
