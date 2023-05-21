@@ -1,14 +1,6 @@
 <template>
     <Navigation />
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <div class="column is-6 is-offset-3">
-                    <router-view />      
-                </div>
-            </div>
-        </div>
-    </section>
+    <router-view />
     <Footer />
 </template>
 

@@ -32,11 +32,11 @@
                                 </span>
                                 <span>Todo</span>
                             </router-link>
-                            <router-link to="/edit" v-if="isLoggedIn" class="mt-2 mr-5 pl-3 pr-3 button is-outlined is-white navbar-item">
+                            <router-link to="/list" v-if="isLoggedIn" class="mt-2 mr-5 pl-3 pr-3 button is-outlined is-white navbar-item">
                                 <span class="material-symbols-outlined mr-2">
                                     edit_note
                                 </span>
-                                <span>Editer</span>
+                                <span>Note</span>
                             </router-link>
                             <div class="buttons navbar-item">
                                 <a @click="signInWithGoogle" v-if="!isLoggedIn" class="button is-primary">    
